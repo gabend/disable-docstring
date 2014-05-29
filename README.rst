@@ -11,6 +11,9 @@ Install::
 
 Usage::
 
-  nosetests -v --disable-docstring
+This plugin is on by default, replacing the docstrings in test output.
+To disable the effects of this plugin, add the following commandline option:
+
+  nosetests -v --enable-docstring
 
 .. _Nose: http://somethingaboutorange.com/mrl/projects/nose/
