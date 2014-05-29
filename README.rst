@@ -7,7 +7,9 @@ test names. Instead it uses the name of the test itself.
 
 Install::
 
-  pip install disabledoc
+  git clone git@github.com:gabend/disable-docstring.git
+  cd disable-docstring
+  python setup.py install
 
 Usage::
 
