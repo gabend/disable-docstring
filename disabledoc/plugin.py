@@ -1,7 +1,7 @@
 import os
 
 from nose.plugins import Plugin
-from nose.case import FunctionTestCase
+
 
 class DisableDocstring(Plugin):
     """Tells unittest not to use docstrings as test names."""
@@ -23,5 +23,8 @@ class DisableDocstring(Plugin):
             return
 
     def describeTest(self, test):
-	module_str, python_str, test_str = test.address()
-	return '%s:%s' % (module_str, test_str)
+        try:
+            module_str, python_str, test_str = test.address()
+            return '%s:%s' % (module_str, test_str)
+        except TypeError:
+            return None
